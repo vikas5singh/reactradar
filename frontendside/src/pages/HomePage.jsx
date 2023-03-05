@@ -10,7 +10,7 @@ const HomePage = () => {
     <Layout title={"Home- Vikas"}>
       {/* banner image */}
       <img
-        src="/src/assets/vikas.jpg"
+ src="https://www.javatpoint.com/images/nature-1.jpg"
         className="banner-img"
         alt="bannerimage"
         width={"100%"}
@@ -20,7 +20,7 @@ const HomePage = () => {
        <div className="row contactus ">
         <div className="col-md-6 ">
           <img
-            src="/src/assets/vikasimage.jpg"
+src="https://www.javatpoint.com/images/nature-2.jpg"
             className="vks_image"
             alt="contactus"
             style={{ width: "100%" }}
