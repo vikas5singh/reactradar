@@ -20,10 +20,10 @@ app.use(cors());
 
 app.use('/api', routes);
 
-app.use(express.static(path.join(__dirname, "./frontendside/build")));
+app.use(express.static(path.join(__dirname, "./frontendside/dist")));
 app.get("*", function (req, res) {
   res.sendFile(
-    path.join(__dirname, "./frontendside/build/index.html"),
+    path.join(__dirname, "./frontendside/dist/index.html"),
     function (err) {
       res.status(500).send(err);
     }
