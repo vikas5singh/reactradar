@@ -11,7 +11,8 @@ const routes = require('./routes/userRouter');
 const app = express();
 
 const path = require('path');
-app.use(express.static(path.join(__dirname, "./frontendside/dist")));
+
+// app.use(express.static(path.join(__dirname, "./frontendside/dist")));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json()); 
 
@@ -19,9 +20,20 @@ app.use(cors());
 
 app.use('/api', routes);
 
-app.use('*', function(req, res){
-res.sendFile(path.join(__dirname, "./frontendside/dist/index.html"));
+app.use(express.static(path.join(__dirname, "./frontendside/build")));
+app.get("*", function (req, res) {
+  res.sendFile(
+    path.join(__dirname, "./frontendside/build/index.html"),
+    function (err) {
+      res.status(500).send(err);
+    }
+  );
 });
+
+
+// app.use('*', function(req, res){
+// res.sendFile(path.join(__dirname, "./frontendside/dist/index.html"));
+// });
 //Mongodb connection
 mongoose.set('strictQuery',false);
 mongoose.connect(db.DB, {useNewUrlParser:true}).then(()=>{
