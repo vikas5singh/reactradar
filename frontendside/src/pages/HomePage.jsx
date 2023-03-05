@@ -7,7 +7,7 @@ import Layout from "./../components/Layout/Layout";
 
 const HomePage = () => {
   return (
-    <Layout title={"ALl Products - Best offers "}>
+    <Layout title={"Home- Vikas"}>
       {/* banner image */}
       <img
         src="/src/assets/vikas.jpg"
