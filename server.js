@@ -21,7 +21,7 @@ app.use('/api', routes);
 
 app.use('*', function(req, res){
 res.sendFile(path.join(__dirname, "./frontendside/dist/index.html"));
-})
+});
 //Mongodb connection
 mongoose.set('strictQuery',false);
 mongoose.connect(db.DB, {useNewUrlParser:true}).then(()=>{
