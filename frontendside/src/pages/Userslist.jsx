@@ -63,7 +63,7 @@ console.log(user);
   },[])
   
 return(
-<Layout title="Register - vikas App">
+<Layout title="Userslist - vikas App">
 <div className="container-fluid mt-5" style={{ minHeight: "100vh" }}>
 <div className="userHeading">
 <h2 className="text-center">Users List</h2>
