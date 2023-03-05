@@ -72,7 +72,7 @@ GetData();
   };
 
   return (
-    <Layout title="Register - vikas App">
+    <Layout title="Users Update - vikas App">
       <div className="form-container" style={{ minHeight: "90vh" }}>
         <form onSubmit={handleSubmit}>
           <h4 className="title">Update Data</h4>
