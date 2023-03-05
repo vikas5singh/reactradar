@@ -40,7 +40,7 @@ GetData();
 
 
   return (
-    <Layout title="Register - vikas App">
+    <Layout title="Users Read - vikas App">
       <div className="form-container" style={{ minHeight: "90vh" }}>
         <form >
           <h4 className="title">View Data</h4>
